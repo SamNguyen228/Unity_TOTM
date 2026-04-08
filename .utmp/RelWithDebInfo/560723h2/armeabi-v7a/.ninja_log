@@ -1,0 +1,11 @@
+# ninja log v5
+44	551	7967538222308811	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9e651947327fe7c9
+555	2690	7967538229519261	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/560723h2/obj/armeabi-v7a/libswappywrapper.so	45cc13ee65556d2f
+27	2940	7967538245454081	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	fef3af63f076e979
+33	3030	7967538246842178	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	10e0eba065502044
+7	3080	7967538246487632	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3f111f224f990bcb
+39	3195	7967538248699046	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7de0fe0cee61b6f1
+12	3197	7967538248719633	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	54f416bafa22c18
+16	3571	7967538252476230	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	e0802d5c9d0794d2
+2	3840	7967538254823175	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	48b6d3451dbabc82
+3840	4849	7967538262535330	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/560723h2/obj/armeabi-v7a/libgame.so	e4c899f81864942f

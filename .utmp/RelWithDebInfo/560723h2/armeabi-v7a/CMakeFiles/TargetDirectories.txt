@@ -1,0 +1,8 @@
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/.utmp/RelWithDebInfo/560723h2/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

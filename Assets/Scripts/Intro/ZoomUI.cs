@@ -7,10 +7,10 @@ public class ZoomUI : MonoBehaviour
     public RectTransform background;
     public RectTransform doorPoint;
 
-    public AudioSource audioSource;   // SFX
+    public AudioSource audioSource;   
     public AudioClip zoomSound;
 
-    public AudioSource bgmSource;     // BGM
+    public AudioSource bgmSource;     
 
     public float waitBeforeClick = 2f;
     public float zoomDuration = 1.5f;
@@ -34,7 +34,7 @@ public class ZoomUI : MonoBehaviour
     {
         if (canClick && !clicked && Input.GetMouseButtonDown(0))
         {
-            audioSource.PlayOneShot(zoomSound);
+            SoundManager.PlaySFX(audioSource, zoomSound);
             StartCoroutine(Zoom());
         }
     }
@@ -64,7 +64,6 @@ public class ZoomUI : MonoBehaviour
             yield return null;
         }
 
-        // zoom xong mới tắt BGM
         if (bgmSource != null)
         {
             bgmSource.Stop();

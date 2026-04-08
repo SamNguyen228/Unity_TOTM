@@ -1,0 +1,21 @@
+# ninja log v5
+44	633	7967466764640934	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	513c6d7e116e393a
+2	3667	7967466794434381	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7dd8d6f487348948
+13	2427	7967466782743923	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	97045b6b5f42fd4f
+8	3349	7967466790137514	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e010e9a0cb1079d7
+26	2734	7967466785475372	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e0f5b5a6e8fced39
+20	2742	7967466784731758	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b22b5fad963fcd60
+637	3390	7967466779798177	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a1g5a2f/obj/arm64-v8a/libswappywrapper.so	1d10db21c1d85e4e
+38	3105	7967466789715131	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e868abe4097c5422
+32	3648	7967466795201984	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	416a78fb993cf049
+3667	4504	7967466799888217	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a1g5a2f/obj/arm64-v8a/libgame.so	84ee230d101392ff
+47	975	7967526554193552	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	513c6d7e116e393a
+89	2571	7967526569744611	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b22b5fad963fcd60
+83	2608	7967526570246491	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e0f5b5a6e8fced39
+79	2851	7967526572573639	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e868abe4097c5422
+35	2864	7967526572473729	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	97045b6b5f42fd4f
+41	2959	7967526573120891	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e010e9a0cb1079d7
+976	3148	7967526564900340	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a1g5a2f/obj/arm64-v8a/libswappywrapper.so	1d10db21c1d85e4e
+16	3482	7967526579112161	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	416a78fb993cf049
+30	3859	7967526582901848	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7dd8d6f487348948
+3860	4171	7967526585369429	E:/CMCUNI/HK8/UnityGameDev/Unity2D/TombOfTheMask/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a1g5a2f/obj/arm64-v8a/libgame.so	84ee230d101392ff

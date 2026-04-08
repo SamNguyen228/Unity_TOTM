@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource moveSound;
     public AudioSource landSound;
 
+    private Vector2 touchStartPos;
+    private bool isSwiping = false;
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -15,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isMoving = false;
 
+    public Vector3 safePosition;
+    public Quaternion safeRotation;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,12 +28,16 @@ public class PlayerMovement : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         rb.freezeRotation = true;
+
+        safePosition = transform.position;
+        safeRotation = transform.rotation;
     }
 
     void Update()
     {
         if (isMoving) return;
 
+        // ===== PC INPUT =====
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             movement = Vector2.left;
@@ -48,15 +58,50 @@ public class PlayerMovement : MonoBehaviour
             movement = Vector2.down;
             StartMove();
         }
+
+        // ===== MOBILE TOUCH (OPTIMIZED) =====
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            // Bắt đầu chạm
+            if (touch.phase == TouchPhase.Began)
+            {
+                touchStartPos = touch.position;
+                isSwiping = true;
+            }
+
+            else if (touch.phase == TouchPhase.Moved && isSwiping)
+            {
+                Vector2 delta = touch.position - touchStartPos;
+
+                if (delta.sqrMagnitude > 900f) 
+                {
+                    if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+                        movement = delta.x > 0 ? Vector2.right : Vector2.left;
+                    else
+                        movement = delta.y > 0 ? Vector2.up : Vector2.down;
+
+                    StartMove();
+                    isSwiping = false;
+                }
+            }
+
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                isSwiping = false;
+            }
+        }
     }
 
     void StartMove()
     {
         isMoving = true;
-        anim.SetBool("isMoving", true);
 
-        // 🔊 sound di chuyển
-        if (moveSound)
+        if (!anim.GetBool("isMoving"))
+            anim.SetBool("isMoving", true);
+
+        if (moveSound && !moveSound.isPlaying)
             moveSound.Play();
 
         float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
@@ -67,7 +112,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isMoving)
         {
-            rb.velocity = movement * speed;
+            Vector2 targetVelocity = movement * speed;
+
+            if (rb.velocity != targetVelocity)
+                rb.velocity = targetVelocity;
         }
     }
 
@@ -76,18 +124,36 @@ public class PlayerMovement : MonoBehaviour
         isMoving = false;
         rb.velocity = Vector2.zero;
 
-        anim.SetBool("isMoving", false);
+        if (anim.GetBool("isMoving"))
+            anim.SetBool("isMoving", false);
 
-        // 🔊 sound đáp đất
         if (landSound)
-            landSound.Play();
+            landSound.PlayOneShot(landSound.clip);
 
-        // đẩy player ra khỏi collider
         transform.position += (Vector3)(normal * 0.1f);
+
+        safePosition = transform.position;
+        safeRotation = transform.rotation;
 
         Vector2 faceDir = -normal;
         float angle = Mathf.Atan2(faceDir.y, faceDir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+    }
+
+    public void ResetState()
+    {
+        isMoving = false;
+
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
+
+        if (anim != null && anim.GetBool("isMoving"))
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

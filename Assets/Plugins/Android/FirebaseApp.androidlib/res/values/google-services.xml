@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
+  <string name="firebase_database_url" translatable="false">https://tombofthemask-5eca1-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+  <string name="gcm_defaultSenderId" translatable="false">358045888693</string>
+  <string name="google_storage_bucket" translatable="false">tombofthemask-5eca1.firebasestorage.app</string>
+  <string name="project_id" translatable="false">tombofthemask-5eca1</string>
+  <string name="google_api_key" translatable="false">AIzaSyDFbw8yUTsHuKo8Womv1I5T4JfLEP9oaiQ</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDFbw8yUTsHuKo8Womv1I5T4JfLEP9oaiQ</string>
+  <string name="google_app_id" translatable="false">1:358045888693:android:3996c0802ccb95774e0efc</string>
+</resources>

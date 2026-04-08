@@ -11,7 +11,7 @@ public class MapIntro : MonoBehaviour
     public GameObject dotSystem;
     public GameObject coinSystem;
     public GameObject starSystem;
-    public GameObject trapSystem; 
+    public GameObject trapSystem;
     public GameObject exit;
 
     public Animator playerAnim;
@@ -22,9 +22,18 @@ public class MapIntro : MonoBehaviour
 
     SpriteRenderer gateSprite;
 
-    void Start()
+    IEnumerator Start()
     {
         gateSprite = gate.GetComponent<SpriteRenderer>();
+
+        yield return new WaitUntil(() => GameObject.FindGameObjectWithTag("Player") != null);
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        playerAnim = player.GetComponentInChildren<Animator>();
+
+        Debug.Log("Player found: " + player.name);
+        Debug.Log("Animator: " + playerAnim);
 
         gateClose.SetActive(false);
         player.SetActive(false);
@@ -51,6 +60,9 @@ public class MapIntro : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
         player.SetActive(true);
+
+        yield return null;
+
         wall.SetActive(true);
         dotSystem.SetActive(true);
         coinSystem.SetActive(true);
@@ -58,12 +70,15 @@ public class MapIntro : MonoBehaviour
         trapSystem.SetActive(true);
         exit.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
 
         if (playerAnim)
-            playerAnim.Play("TravelBoyArrive");
+        {
+            Debug.Log("Play Arrive");
+            playerAnim.CrossFade("Arrive", 0.05f);
+        }
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.8f);
 
         gate.SetActive(false);
         gateClose.SetActive(true);
@@ -71,10 +86,13 @@ public class MapIntro : MonoBehaviour
         if (gateCloseSound)
             gateCloseSound.Play();
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.5f);
 
         if (playerAnim)
-            playerAnim.Play("TravelBoyIdle");
+        {
+            Debug.Log("Play Idle");
+            playerAnim.CrossFade("Idle", 0.1f);
+        }
 
         if (bgm)
             bgm.Play();
@@ -91,10 +109,8 @@ public class MapIntro : MonoBehaviour
         while (time < duration)
         {
             time += Time.deltaTime;
-
             c.a = Mathf.Lerp(0, 1, time / duration);
             sr.color = c;
-
             yield return null;
         }
     }

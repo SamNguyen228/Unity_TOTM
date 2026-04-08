@@ -1,5 +1,5 @@
 # ===============================
-# Unity generated folders
+# Unity Generated Folders
 # ===============================
 [Ll]ibrary/
 [Tt]emp/
@@ -9,10 +9,13 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
+[Cc]ache/
+[Rr]ecordings/
 
 # ===============================
-# Asset meta data should only be ignored when the asset is ignored
+# Asset Meta Data
 # ===============================
+# Only ignore asset meta files if their asset is ignored
 !/[Aa]ssets/**/*.meta
 
 # ===============================
@@ -29,37 +32,185 @@
 *.pidb
 *.booproj
 *.svd
+*.DotSettings.user
+*.VC.db
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
 
 # ===============================
-# OS generated files
+# JetBrains ReSharper
+# ===============================
+_ReSharper*/
+*.resharper
+*.resharper.user
+
+# ===============================
+# macOS
 # ===============================
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
+.AppleDouble
+.LSOverride
+
+# ===============================
+# Windows
+# ===============================
 Thumbs.db
 ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
 # ===============================
-# Unity crash reports
+# Linux
+# ===============================
+.directory
+*~
+
+# ===============================
+# Unity Crash Reports
 # ===============================
 sysinfo.txt
+hs_err_pid*.log
+crash*.log
 
 # ===============================
-# Unity Addressables
+# Editor Preferences & Local Settings
 # ===============================
-[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
-[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.hash
+ProjectSettings/Packages/
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/ProjectSettings.asset
 
 # ===============================
-# Build artifacts
+# Unity Packages Cache
+# ===============================
+[Pp]ackages/
+!Packages/manifest.json
+!Packages/packages-lock.json
+Packages/*/
+!Packages/*/package.json
+!Packages/*/package-lock.json
+
+# ===============================
+# Build Artifacts
 # ===============================
 *.apk
 *.aab
+*.aar
 *.unitypackage
+*.bundle
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.so
+*.dylib
 
 # ===============================
-# Crashlytics generated files
+# Addressables Related
+# ===============================
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.hash
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/AddressableAssetSettings.asset
+[Aa]ssets/StreamingAssets/aa/
+
+# ===============================
+# Firebase & Backend
+# ===============================
+google-services.json
+GoogleService-Info.plist
+firebase-config.json
+firebase-debug.log
+*.firebase.json
+
+# ===============================
+# Local Configuration Files
+# ===============================
+local.settings.json
+config.local.json
+settings.local.json
+credentials.json
+secrets.json
+.env
+.env.local
+
+# ===============================
+# Crashlytics
 # ===============================
 crashlytics-build.properties
+com_crashlytics_export_strings.xml
+
+# ===============================
+# Game Analytics & Ads
+# ===============================
+Analytics/
+Analytics.meta
+UnityAdsMetrics.txt
+
+# ===============================
+# Generated Files & Temp Data
+# ===============================
+*.class
+*.jar
+*.war
+*.ear
+.gradle
+build/
+*.log
+*.pot
+*.mo
+*.DS_Store
+*.sublime-workspace
+*.swp
+*.swo
+*~.nib
+.classpath
+.project
+.pydevproject
+
+# ===============================
+# IDE Specific Files
+# ===============================
+*.opensdf
+*.sdf
+*.VC.opendb
+.vscode/
+launch.json
+tasks.json
+c_cpp_properties.json
+
+# ===============================
+# Unit Testing
+# ===============================
+TestResults/
+tests/results/
+coverage/
+*.trx
+
+# ===============================
+# Game Build Outputs
+# ===============================
+Build/
+build/
+*.app
+*.ipa
+*.unitypackage
+StreamingAssets/
+
+# ===============================
+# Miscellaneous
+# ===============================
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+.gitconfig
+.gitattributes
+.DS_Store
+node_modules/
+dist/
+out/

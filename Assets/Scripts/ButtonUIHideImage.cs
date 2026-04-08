@@ -3,13 +3,13 @@ using UnityEngine.EventSystems;
 
 public class ButtonUIHideImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public GameObject targetImage; // Image kéo vào Inspector
+    public GameObject targetImage; 
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (targetImage != null)
         {
-            targetImage.SetActive(false); // Ẩn khi giữ
+            targetImage.SetActive(false); 
         }
     }
 
@@ -17,7 +17,7 @@ public class ButtonUIHideImage : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         if (targetImage != null)
         {
-            targetImage.SetActive(true); // Hiện lại khi thả tay
+            targetImage.SetActive(true); 
         }
     }
 }

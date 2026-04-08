@@ -1,9 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-using UnityEngine;
-using System.Collections;
-
 public class IntroSequence : MonoBehaviour
 {
     public GameObject cloud;
@@ -14,6 +11,16 @@ public class IntroSequence : MonoBehaviour
     public GameObject stars;
     public GameObject tapText;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            Debug.Log("Đã xóa toàn bộ PlayerPrefs!");
+        }
+    }
+
     void Start()
     {
         StartCoroutine(Intro());
@@ -21,7 +28,6 @@ public class IntroSequence : MonoBehaviour
 
     IEnumerator Intro()
     {
-        // chờ logo
         yield return new WaitForSeconds(2.5f);
 
         cloud.SetActive(true);

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Venom
+  m_Controller: {fileID: 9100000, guid: f5e272340a5308144bdfc9728274394c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b7f6580053847f54f88f03453047dede, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ce1e6320029b5a343859d69222abd8a8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d262fa6289f31e4478df1ccaef96851b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c25c76ea6ff119418011fe393320ff2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7172d0495e70c4d42b672356f80a0474, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 685dda974beeae34ba2e53d6ff7a5ce9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6ec63512bbd7a854abf4f5b266486207, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 59d0141be8164284b9a18f873efaaaee, type: 2}
