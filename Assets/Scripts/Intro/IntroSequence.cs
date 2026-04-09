@@ -17,7 +17,6 @@ public class IntroSequence : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
-            Debug.Log("Đã xóa toàn bộ PlayerPrefs!");
         }
     }
 

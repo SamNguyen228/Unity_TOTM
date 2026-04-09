@@ -17,8 +17,8 @@ public class RewardCoinButton : MonoBehaviour
 
     void OnRewardSuccess()
     {
-        Debug.Log("Nhận thưởng coin!");
         PlayerData.AddCoin(rewardAmount);
+        PlayerData.AddEarnedCoin(rewardAmount);
 
         if (TopBarUI.Instance != null)
             TopBarUI.Instance.UpdateUI();

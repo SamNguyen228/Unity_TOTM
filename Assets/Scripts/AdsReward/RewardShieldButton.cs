@@ -18,8 +18,6 @@ public class RewardShieldButton : MonoBehaviour
 
     void OnRewardSuccess()
     {
-        Debug.Log("Nhận thưởng shield!");
-
         PlayerData.AddShield(rewardAmount);
 
         if (ShieldUI.Instance != null)

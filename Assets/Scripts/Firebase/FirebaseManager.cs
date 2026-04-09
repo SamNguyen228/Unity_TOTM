@@ -66,8 +66,6 @@ public class FirebaseManager : MonoBehaviour
             user = auth.CurrentUser;
             isReady = true;
 
-            Debug.Log("Reuse UserID: " + user.UserId);
-
             UploadPlayerInfo();
             return;
         }
@@ -78,8 +76,6 @@ public class FirebaseManager : MonoBehaviour
             {
                 user = auth.CurrentUser;
                 isReady = true;
-
-                Debug.Log("New UserID: " + user.UserId);
 
                 UploadPlayerInfo();
             }
@@ -100,8 +96,6 @@ public class FirebaseManager : MonoBehaviour
         string json = JsonUtility.ToJson(entry);
 
         dbRef.Child("Leaderboard").Child(userId).SetRawJsonValueAsync(json);
-
-        Debug.Log("Uploaded player info after login");
     }
 
     // ================= SAVE SCORE =================
@@ -121,8 +115,6 @@ public class FirebaseManager : MonoBehaviour
         dbRef.Child("Leaderboard").Child(userId).Child("score").SetValueAsync(score);
 
         PlayerPrefs.SetInt("HighScore", score);
-
-        Debug.Log("Updated score: " + score);
     }
 
     // ================= UPDATE INFO =================

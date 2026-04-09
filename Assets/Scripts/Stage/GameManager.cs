@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("LastPlayedLevel", level);
 
         totalDot = dotParent.childCount;
-        Debug.Log("Total Dot: " + totalDot);
 
         maxWidth = fillRect.sizeDelta.x;
         fillRect.sizeDelta = new Vector2(0, fillRect.sizeDelta.y);
@@ -76,6 +75,7 @@ public class GameManager : MonoBehaviour
         coin += amount;
 
         PlayerData.AddCoin(amount);
+        PlayerData.AddEarnedCoin(amount);
 
         if (TopBarUI.Instance != null)
         {
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     public void FinishLevel()
     {
         clearPopup.SetActive(true);
-        int score = coin + star * 100;
+        int score = PlayerData.GetTotalEarnedCoins();
 
         FirebaseManager.Instance.SaveScore(score);
         StartCoroutine(FinishSequence());
@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
     public void ClaimReward()
     {
         PlayerData.AddCoin(rewardAmount);
+        PlayerData.AddEarnedCoin(rewardAmount);
     
         if (TopBarUI.Instance != null)
             TopBarUI.Instance.UpdateUI();
@@ -259,8 +260,6 @@ public class GameManager : MonoBehaviour
 
     void OnReviveSuccess()
     {
-        Debug.Log("Revive bằng Ads!");
-
         if (currentDeadPlayer != null)
         {
             currentDeadPlayer.Revive();

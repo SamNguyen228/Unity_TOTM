@@ -57,6 +57,7 @@ public class RewardPopupUI : MonoBehaviour
         {
             case RewardType.Coin:
                 PlayerData.AddCoin(currentReward.amount);
+                PlayerData.AddEarnedCoin(currentReward.amount);
                 break;
 
             case RewardType.Energy:

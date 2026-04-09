@@ -24,8 +24,6 @@ public class RewardSpinButton : MonoBehaviour
 
     IEnumerator OpenUIWithDelay()
     {
-        Debug.Log("Đợi ads đóng hoàn toàn...");
-
         yield return new WaitForSeconds(0.2f); 
 
         if (!this) yield break;

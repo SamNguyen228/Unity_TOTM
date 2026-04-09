@@ -64,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            // Bắt đầu chạm
             if (touch.phase == TouchPhase.Began)
             {
                 touchStartPos = touch.position;

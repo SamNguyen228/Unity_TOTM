@@ -25,16 +25,9 @@ public class MapIntro : MonoBehaviour
     IEnumerator Start()
     {
         gateSprite = gate.GetComponent<SpriteRenderer>();
-
         yield return new WaitUntil(() => GameObject.FindGameObjectWithTag("Player") != null);
-
         player = GameObject.FindGameObjectWithTag("Player");
-
         playerAnim = player.GetComponentInChildren<Animator>();
-
-        Debug.Log("Player found: " + player.name);
-        Debug.Log("Animator: " + playerAnim);
-
         gateClose.SetActive(false);
         player.SetActive(false);
         wall.SetActive(false);
@@ -74,7 +67,6 @@ public class MapIntro : MonoBehaviour
 
         if (playerAnim)
         {
-            Debug.Log("Play Arrive");
             playerAnim.CrossFade("Arrive", 0.05f);
         }
 
@@ -90,7 +82,6 @@ public class MapIntro : MonoBehaviour
 
         if (playerAnim)
         {
-            Debug.Log("Play Idle");
             playerAnim.CrossFade("Idle", 0.1f);
         }
 

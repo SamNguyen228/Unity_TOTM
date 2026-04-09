@@ -23,6 +23,21 @@ public static class PlayerData
         PlayerPrefs.SetInt("Coin", amount);
     }
 
+    public static int GetTotalEarnedCoins()
+    {
+        return PlayerPrefs.GetInt("TotalEarnedCoins", 200);
+    }
+
+    public static void AddEarnedCoin(int amount)
+    {
+        if (amount > 0)
+        {
+            int total = GetTotalEarnedCoins() + amount;
+            PlayerPrefs.SetInt("TotalEarnedCoins", total);
+            PlayerPrefs.Save();
+        }
+    }
+
     // ===== ENERGY =====
     public static int GetEnergy()
     {

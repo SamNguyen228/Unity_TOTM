@@ -102,7 +102,6 @@ public class PlayerDeath : MonoBehaviour
         if (ShieldUI.Instance != null)
             ShieldUI.Instance.UpdateUI();
 
-        Debug.Log("Shield absorbed damage!");
         return true;
     }
 }

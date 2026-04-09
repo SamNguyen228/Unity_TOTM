@@ -23,8 +23,6 @@ public class RewardEnergyButton : MonoBehaviour
 
     void OnRewardSuccess()
     {
-        Debug.Log("Nhận ENERGY!");
-
         PlayerData.AddEnergy(energyAmount);
 
         if (EnergyUI.Instance != null)

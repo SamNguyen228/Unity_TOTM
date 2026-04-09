@@ -49,12 +49,9 @@ public class PlayerCard : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 TopBarUI.Instance.UpdateUI();
                 PlayerData.SetOwned(charId);
                 PlayerData.SetSelectedChar(charId);
-                Debug.Log("Clicked charId: " + charId);
             }
             else
             {
-                Debug.Log("Không đủ coin");
-
                 if (shopPanel != null)
                 {
                     shopPanel.SetActive(true);
